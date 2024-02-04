@@ -63,7 +63,7 @@ nav {
     background-color: #ce1126;
     border-color: #ce1126;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    pointer-events: none; /* Disable clicking */
+    pointer-events: none;
 }
 
 /* Main content styling */
@@ -110,45 +110,45 @@ footer {
 
 /* Messaging styling */
 input[type="text"], input[type="email"], textarea {
-    width: 100%; /* Full-width inputs */
-    padding: 10px; /* Ample padding for ease of typing */
-    margin-bottom: 15px; /* Space between each field */
-    border: 1px solid #e3e6ea; /* Subtle border color */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background-color: #f8f9fa; /* Slightly off-white background for the inputs */
-    resize: none; /* Prevent textarea resizing to maintain layout integrity */
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for focus effects */
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e3e6ea; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+    background-color: #f8f9fa;
+    resize: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-color: #0056b3; /* Highlighted border color on focus */
-    box-shadow: 0 0 0 2px rgba(0,86,179,0.25); /* Subtle glow effect */
-    outline: none; /* Remove default focus outline */
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0,86,179,0.25);
+    outline: none;
 }
 
 button[type="submit"] {
-    background-color: #0056b3; /* Primary button color */
-    color: #ffffff; /* Text color */
-    padding: 10px 15px; /* Ample padding */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Readable font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button[type="submit"]:hover {
-    background-color: #00387b; /* Darker shade on hover */
+    background-color: #00387b;
 }
 
 .form-group {
-    margin-bottom: 15px; /* Space between form groups */
+    margin-bottom: 15px;
 }
 
 label {
-    display: block; /* Ensure the label is on its own line */
-    margin-bottom: 5px; /* Space between label and input field */
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Responsive design */
@@ -163,7 +163,7 @@ label {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 24px; /* Adjusted for smaller screens */
+        font-size: 24px;
     }
 
     header h1, header h2, .nav-button {
@@ -175,9 +175,9 @@ label {
     }
 
     .nav-button, main, section, footer {
-        width: 100%; /* Full width for mobile nav */
-        margin: 5px 0; /* Adjusted margin for stacked nav buttons */
-        padding: 10px; /* Reduced padding for content areas */
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
     }
     .footer-column {
         flex-basis: 100%;
