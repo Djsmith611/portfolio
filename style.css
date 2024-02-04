@@ -1,0 +1,186 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity="0.1"><rect x="50" width="1" height="100"/><rect y="50" width="100" height="1"/></svg>'), linear-gradient(to bottom, #cae0ff 0%, #ffffff 100%);
+    color: #212529;
+    line-height: 1.5;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #003087 0%, #1a5bac 100%);
+    animation: GradientAnimation 30s ease infinite;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+@keyframes GradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1, header h2 {
+    margin: 0;
+    padding: 0 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: #002e5d;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color: #ce1126;
+    border-color: #ce1126;
+    transform: translateY(-2px) rotate(-3deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button.active {
+    background-color: #ce1126;
+    border-color: #ce1126;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    pointer-events: none; /* Disable clicking */
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+footer {
+    background: #002e5d;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    margin: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Messaging styling */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Full-width inputs */
+    padding: 10px; /* Ample padding for ease of typing */
+    margin-bottom: 15px; /* Space between each field */
+    border: 1px solid #e3e6ea; /* Subtle border color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #f8f9fa; /* Slightly off-white background for the inputs */
+    resize: none; /* Prevent textarea resizing to maintain layout integrity */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for focus effects */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #0056b3; /* Highlighted border color on focus */
+    box-shadow: 0 0 0 2px rgba(0,86,179,0.25); /* Subtle glow effect */
+    outline: none; /* Remove default focus outline */
+}
+
+button[type="submit"] {
+    background-color: #0056b3; /* Primary button color */
+    color: #ffffff; /* Text color */
+    padding: 10px 15px; /* Ample padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Readable font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #00387b; /* Darker shade on hover */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 5px; /* Space between label and input field */
+}
+
+/* Responsive design */
+.social-icons a {
+    margin: 0 5px;
+    display: inline-block;
+    color: inherit;
+}
+.social-icons a:hover {
+    color: #ce1126;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+
+    header h1, header h2, .nav-button {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-button, main, section, footer {
+        width: 100%; /* Full width for mobile nav */
+        margin: 5px 0; /* Adjusted margin for stacked nav buttons */
+        padding: 10px; /* Reduced padding for content areas */
+    }
+    .footer-column {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
